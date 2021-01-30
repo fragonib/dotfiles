@@ -1,0 +1,6 @@
+appium
+generator-alexa
+ios-deploy
+localtunnel
+mocha
+yo
