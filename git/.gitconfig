@@ -1,0 +1,15 @@
+[user]
+	name = Francisco González Ibáñez
+	email = fragonib@gmail.com
+[http]
+	sslVerify = false
+[push]
+	default = simple
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[core]
+	autocrlf = input
+	eol = lf
+	safecrlf = false
+[credential]
+	helper = store

@@ -12,3 +12,6 @@
     ~/.zlogin: shell/zsh/.zlogin
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitattributes: git/.gitattributes
+    ~/.gitignore_global: git/.gitignore_global
