@@ -13,4 +13,4 @@
 	safecrlf = false
 	excludesFile = ~/.gitignore_global
 [credential]
-	helper = store
+	helper = osxkeychain
