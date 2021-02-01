@@ -87,14 +87,11 @@ cask "webpquicklook"
 cask "xquartz"
 cask "zenmap"
 mas "GarageBand", id: 682658836
-mas "Ghostery Lite", id: 1436953057
 mas "iMovie", id: 408981434
-mas "Keepa - Price Tracker", id: 1533805339
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Phiewer lite", id: 1226444549
 mas "Raindrop.io for Safari", id: 957810159
 mas "Slack", id: 803453959
 mas "Trello", id: 1278508951
