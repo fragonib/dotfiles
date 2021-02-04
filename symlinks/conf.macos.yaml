@@ -16,3 +16,6 @@
     ~/bin/sed: /usr/local/opt/gnu-sed/libexec/gnubin/sed
     ~/bin/touch: /usr/local/bin/gtouch
     ~/bin/find: /usr/local/opt/findutils/bin/gfind
+    ~/.config/karabiner: os/mac/karabiner-elements
+    ~/.config/karabiner.edn: os/mac/karabiner-goku/karabiner.edn
+    ~/Library/Preferences/com.knollsoft.Rectangle.plist: os/mac/rectangle/com.knollsoft.Rectangle.plist
