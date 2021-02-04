@@ -1,4 +1,4 @@
-# Uncomment for debuf with `zprof`
+# Uncomment for debug with `zprof`
 # zmodload zsh/zprof
 
 # ZSH Ops
@@ -22,3 +22,4 @@ prompt codelytv
 
 source "$DOTFILES_PATH/shell/zsh/key-bindings.zsh"
 source "$DOTLY_PATH/shell/zsh/bindings/reverse_search.zsh"
+source "$HOME/.sdkman/bin/sdkman-init.sh"
