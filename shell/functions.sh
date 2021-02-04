@@ -35,3 +35,70 @@ reverse-search() {
   typeset -f zle-line-init >/dev/null && zle zle-line-init
   return $ret
 }
+
+
+function lazy_nvm {
+  unset -f nvm
+  unset -f npm
+  unset -f node
+  unset -f npx
+
+  if [ -d "${HOME}/.nvm" ]; then
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # linux
+    [ -s "$(brew --prefix nvm)/nvm.sh" ] && source $(brew --prefix nvm)/nvm.sh # osx
+  fi
+}
+
+# aliases
+function nvm { lazy_nvm; nvm "$@"; }
+function npm { lazy_nvm; npm "$@"; }
+function node { lazy_nvm; node "$@"; }
+function npx { lazy_nvm; npx "$@"; }
+
+function lazy_exec {
+  local lazy_fname="lazy_$1"
+  local lazy_file="$/$1.sh"
+  shift
+  local fname=$(declare -f -F $)
+  [ -n "$fname" ] && [ -f "$lazy_file" ] || source "$lazy_file"
+  $ "$"
+}
+
+progress-bar() {
+  local duration=${1}
+
+
+    already_done() { for ((done=0; done<$elapsed; done++)); do printf "▇"; done }
+    remaining() { for ((remain=$elapsed; remain<$duration; remain++)); do printf " "; done }
+    percentage() { printf "| %s%%" $(( (($elapsed)*100)/($duration)*100/100 )); }
+    clean_line() { printf "\r"; }
+
+  for (( elapsed=1; elapsed<=$duration; elapsed++ )); do
+      already_done; remaining; percentage
+      sleep 1
+      clean_line
+  done
+  clean_line
+}
+
+function long_echo {
+  lazy_exec "$0" "$@"
+}
+
+progress-bar() {
+  local duration=${1}
+
+
+    already_done() { for ((done=0; done<$elapsed; done++)); do printf "▇"; done }
+    remaining() { for ((remain=$elapsed; remain<$duration; remain++)); do printf " "; done }
+    percentage() { printf "| %s%%" $(( (($elapsed)*100)/($duration)*100/100 )); }
+    clean_line() { printf "\r"; }
+
+  for (( elapsed=1; elapsed<=$duration; elapsed++ )); do
+      already_done; remaining; percentage
+      sleep 1
+      clean_line
+  done
+  clean_line
+}
