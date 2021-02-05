@@ -136,9 +136,9 @@
     :rules [:Keynote [:zoom-in :!CSperiod] [:zoom-out :!CScomma]]}]
 
  ;; ------------ Cheatsheet ------------
- ;; ! stand for mandatory
- ;; # stand for optional
- ;; !! stand for mandatory command + control + optional + shift (hyper)
+ ;; ! stands for mandatory
+ ;; # stands for optional
+ ;; !! stands for mandatory command + control + optional + shift (hyper)
  ;; C T O S for left command control optional shift
  ;; Q W E R for right command control optional shift
  ;; F for fn
