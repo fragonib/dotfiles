@@ -1,14 +1,16 @@
 # MacOS
 # ----------------------------------
-# Karabiner
+
+# Karabiner (ignorables)
 /os/mac/karabiner-elements/automatic_backups
 
-# Alfred
+# Alfred (ignorables)
 os/mac/alfred/remote
 
 
 # Common
 # ----------------------------------
+
 # Compiled zsh
 shell/zsh/**/**.zwc
 shell/zsh/**/**.zwc.old
