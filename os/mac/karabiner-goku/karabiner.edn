@@ -70,11 +70,12 @@
 
    {:des   "Open apps mode"
     :rules [:open-mode
-            [:c [:open-app "Google Chrome Beta"]]
-            [:e [:open-app "Telegram"]]
+            [:c [:open-app "Google Chrome"]]
+            [:s [:open-app "Safari"]]
+            [:m [:open-app "Telegram"]]
             [:i [:open-app "Intellij Idea"]]
             [:n [:open-app "Notion"]]
-            [:s [:open-app "Slack"]]
+            [:l [:open-app "Slack"]]
             [:t [:open-app "iTerm"]]]}
 
    {:des   "Open tabs mode"
@@ -88,6 +89,7 @@
             [:n [:open-in-chrome "news.ycombinator.com"]]
             [:y [:open-in-chrome "youtube.com"]]
             [:w [:open-in-chrome "twitch.tv"]]]}
+
    {:des   "Script mode"
     :rules [:script-mode
             ;; Generate uuid
