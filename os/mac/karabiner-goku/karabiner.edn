@@ -17,7 +17,7 @@
  :froms     {:line-delete              {:modi :left_command :key :delete_or_backspace}
              :line-duplicate           {:modi :left_command :key :d}
              :selection-extend         {:modi :left_option :key :up_arrow}
-             :selection-shrink         {:modi :left_option :key :down_arrow}
+             :selection-shrink         {:modi :left_option  :key :down_arrow}
              :show-recent              {:modi :left_command :key :e}
              :sidebar-primary-toggle   {:modi :left_command :key :1}
              :sidebar-secondary-toggle {:modi :left_command :key :2}
