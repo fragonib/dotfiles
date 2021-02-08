@@ -17,7 +17,7 @@
  :froms     {:line-delete              {:modi :left_command :key :delete_or_backspace}
              :line-duplicate           {:modi :left_command :key :d}
              :selection-extend         {:modi :left_option :key :up_arrow}
-             :selection-shrink         {:modi :left_option  :key :down_arrow}
+             :selection-shrink         {:modi :left_option :key :down_arrow}
              :show-recent              {:modi :left_command :key :e}
              :sidebar-primary-toggle   {:modi :left_command :key :1}
              :sidebar-secondary-toggle {:modi :left_command :key :2}
@@ -52,7 +52,9 @@
    ;; ------------ Utils ------------
    {:des "[util] Disable Caps Locks" :rules [[:caps_lock ""]]}
    {:des   "[util] Extend selection"
-    :rules [[:selection-extend [:!Oleft_arrow :!OSright_arrow] [:!IntelliJ :!Notion]]]}
+    :rules [[:selection-extend
+             [:!Oleft_arrow :!OSright_arrow]
+             [:!IntelliJ :!Notion]]]}
    {:des   "[util] Delete line"
     :rules [[:line-delete
              [:!Cright_arrow :!Cdelete_or_backspace :delete_or_backspace]
@@ -61,12 +63,12 @@
    ;; ------------ Modes ------------
    {:des   "Emoji mode"
     :rules [:emoji-mode
-            [:d [:paste "👎"]]
             [:g [:paste "😬"]]
             [:l [:paste "😂"]]
+            [:y [:paste "👀"]]
+            [:d [:paste "👎"]]
             [:p [:paste "➕"]]
-            [:s [:paste "👍"]]
-            [:v [:paste "✅"]]]}
+            [:u [:paste "👍"]]]}
 
    {:des   "Open apps mode"
     :rules [:open-mode
@@ -107,7 +109,8 @@
     :rules [[:!CSOp "$HOME/.dotfiles/bin/sdot codely open_course"]]}
 
    ;; ------------ Application specific ------------
-   {:des "[chrome] Show recent tabs" :rules [:Chrome [:show-recent :!CSa]]}
+   {:des   "[chrome] Show recent tabs"
+    :rules [:Chrome [:show-recent :!CSa]]}
    {:des "[chrome] Inspect element" :rules [:Chrome [:!CSi :!CSc]]}
    {:des "[chrome] Toggle console" :rules [:Chrome [:!CTOt :!COj]]}
    {:des   "[chrome] Switch profile"
@@ -116,23 +119,28 @@
    {:des   "[slack] Navigate between channels"
     :rules [:Slack [:!Cp :!Ck] [:!Ce :!Ck]]}
    {:des   "[slack] Toggle sidebars"
-    :rules [:Slack [:sidebar-primary-toggle :!CSd] [:sidebar-secondary-toggle :!Cperiod]]}
+    :rules [:Slack
+            [:sidebar-primary-toggle :!CSd]
+            [:sidebar-secondary-toggle :!Cperiod]]}
    {:des   "[slack] Move between workspaces"
     :rules [:Slack [:!O1 :!C1] [:!O2 :!C2] [:!O3 :!C3]]}
    {:des   "[slack] Reactions"
     :rules [:Slack
-            [:!COv [:paste-and-return "+:white_check_mark:"]]
-            [:!COs [:paste-and-return "+:thumbsup:"]]
+            [:!COg [:paste-and-return "+:grimacing:"]]
+            [:!COl [:paste-and-return "+:joy:"]]
+            [:!COy [:paste-and-return "+:eye:"]]
             [:!COd [:paste-and-return "+:thumbsdown:"]]
             [:!COp [:paste-and-return "+:heavy_plus_sign:"]]
-            [:!COg [:paste-and-return "+:grimacing:"]]
-            [:!COl [:paste-and-return "+:joy:"]]]}
+            [:!COu [:paste-and-return "+:thumbsup:"]]]}
 
-   {:des "[notion] Show recent pages" :rules [:Notion [:show-recent :!Cp]]}
+   {:des   "[notion] Show recent pages"
+    :rules [:Notion [:show-recent :!Cp]]}
    {:des   "[notion] Toggle sidebar"
     :rules [:Notion [:sidebar-primary-toggle :!Cbackslash]]}
    {:des   "[notion] Extend selection"
-    :rules [:Notion [:selection-extend :!Sup_arrow] [:selection-shrink :!Sdown_arrow]]}
+    :rules [:Notion
+            [:selection-extend :!Sup_arrow]
+            [:selection-shrink :!Sdown_arrow]]}
 
    {:des   "[keynote] Zoom in/out"
     :rules [:Keynote [:zoom-in :!CSperiod] [:zoom-out :!CScomma]]}]

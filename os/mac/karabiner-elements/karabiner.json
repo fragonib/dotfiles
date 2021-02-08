@@ -196,51 +196,6 @@
         "description" : "Emoji mode",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "d"
-          },
-          "to" : [ {
-            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"👎\""
-          } ],
-          "conditions" : [ {
-            "name" : "emoji-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "emoji-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"👎\""
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "e"
-            }, {
-              "key_code" : "d"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "emoji-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
             "key_code" : "g"
           },
           "to" : [ {
@@ -331,6 +286,96 @@
           }
         }, {
           "from" : {
+            "key_code" : "y"
+          },
+          "to" : [ {
+            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"👀\""
+          } ],
+          "conditions" : [ {
+            "name" : "emoji-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "emoji-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"👀\""
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "e"
+            }, {
+              "key_code" : "y"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "emoji-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "d"
+          },
+          "to" : [ {
+            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"👎\""
+          } ],
+          "conditions" : [ {
+            "name" : "emoji-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "emoji-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"👎\""
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "e"
+            }, {
+              "key_code" : "d"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "emoji-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
             "key_code" : "p"
           },
           "to" : [ {
@@ -376,7 +421,7 @@
           }
         }, {
           "from" : {
-            "key_code" : "s"
+            "key_code" : "u"
           },
           "to" : [ {
             "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"👍\""
@@ -404,52 +449,7 @@
             "simultaneous" : [ {
               "key_code" : "e"
             }, {
-              "key_code" : "s"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "emoji-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "v"
-          },
-          "to" : [ {
-            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"✅\""
-          } ],
-          "conditions" : [ {
-            "name" : "emoji-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "emoji-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"✅\""
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "e"
-            }, {
-              "key_code" : "v"
+              "key_code" : "u"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -1210,13 +1210,13 @@
         "description" : "[slack] Reactions",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "v",
+            "key_code" : "g",
             "modifiers" : {
               "mandatory" : [ "left_command", "left_option" ]
             }
           },
           "to" : [ {
-            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"+:white_check_mark:\" --returning"
+            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"+:grimacing:\" --returning"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -1225,13 +1225,28 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "s",
+            "key_code" : "l",
             "modifiers" : {
               "mandatory" : [ "left_command", "left_option" ]
             }
           },
           "to" : [ {
-            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"+:thumbsup:\" --returning"
+            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"+:joy:\" --returning"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.tinyspeck.slackmacgap" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "y",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_option" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"+:eye:\" --returning"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -1270,28 +1285,13 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "g",
+            "key_code" : "u",
             "modifiers" : {
               "mandatory" : [ "left_command", "left_option" ]
             }
           },
           "to" : [ {
-            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"+:grimacing:\" --returning"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.tinyspeck.slackmacgap" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "l",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_option" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"+:joy:\" --returning"
+            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"+:thumbsup:\" --returning"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
