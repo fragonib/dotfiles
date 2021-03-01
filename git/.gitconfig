@@ -14,3 +14,5 @@
 	excludesFile = ~/.gitignore_global
 [credential]
 	helper = osxkeychain
+[pull]
+	rebase = false
