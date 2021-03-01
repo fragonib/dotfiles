@@ -68,7 +68,9 @@
             [:y [:paste "👀"]]
             [:d [:paste "👎"]]
             [:p [:paste "➕"]]
-            [:u [:paste "👍"]]]}
+            [:u [:paste "👍"]]
+            [:a [:paste "👏"]]
+            ]}
 
    {:des   "Open apps mode"
     :rules [:open-mode
@@ -131,7 +133,9 @@
             [:!COy [:paste-and-return "+:eye:"]]
             [:!COd [:paste-and-return "+:thumbsdown:"]]
             [:!COp [:paste-and-return "+:heavy_plus_sign:"]]
-            [:!COu [:paste-and-return "+:thumbsup:"]]]}
+            [:!COu [:paste-and-return "+:thumbsup:"]]
+            [:!COa [:paste-and-return "+:clap:"]]
+            ]}
 
    {:des   "[notion] Show recent pages"
     :rules [:Notion [:show-recent :!Cp]]}
