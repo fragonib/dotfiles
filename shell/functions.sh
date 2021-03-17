@@ -103,4 +103,4 @@ progress-bar() {
   clean_line
 }
 
-mkcd() { mkdir -p "$@" && cd "$@"; }
+md() { mkdir -p "$@" && cd "$@"; }
