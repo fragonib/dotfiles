@@ -11,8 +11,9 @@ source "$DOTLY_PATH/scripts/core/_main.sh"
 ##?   add_code_templates
 docs::parse "$@"
 
+intellij_name="IdeaIC"  # Use 'IntelliJIdea' for commercial or 'IdeaIC' for community edition
 preferences_dir="$HOME/Library/Application Support/JetBrains"
-intellij_version=$(ls "$preferences_dir" | grep 'IntelliJIdea' | sort -r | head -n 1)
+intellij_version=$(ls "$preferences_dir" | grep "$intellij_name" | sort -r | head -n 1)
 intellij_code_templates_folder="$preferences_dir/$intellij_version/fileTemplates"
 
 rm -rf "$intellij_code_templates_folder"
