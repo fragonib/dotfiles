@@ -84,9 +84,7 @@ cask "suspicious-package"
 cask "transmission-remote-gui"
 cask "telegram"
 cask "visual-studio-code"
-cask "webpquicklook"
 cask "whatsapp"
 cask "slack"
 mas "Raindrop.io for Safari", id: 957810159
 mas "Trello", id: 1278508951
-mas "TweetDeck", id: 485812721
