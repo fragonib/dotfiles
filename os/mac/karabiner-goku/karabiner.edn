@@ -66,9 +66,9 @@
             [:g [:paste "😬"]]
             [:l [:paste "😂"]]
             [:y [:paste "👀"]]
-            [:d [:paste "👎"]]
             [:p [:paste "➕"]]
-            [:u [:paste "👍"]]
+            [:o [:paste "👍"]]
+            [:k [:paste "👎"]]
             [:a [:paste "👏"]]
             ]}
 
@@ -131,9 +131,9 @@
             [:!COg [:paste-and-return "+:grimacing:"]]
             [:!COl [:paste-and-return "+:joy:"]]
             [:!COy [:paste-and-return "+:eye:"]]
-            [:!COd [:paste-and-return "+:thumbsdown:"]]
             [:!COp [:paste-and-return "+:heavy_plus_sign:"]]
-            [:!COu [:paste-and-return "+:thumbsup:"]]
+            [:!COo [:paste-and-return "+:thumbsup:"]]
+            [:!COk [:paste-and-return "+:thumbsdown:"]]
             [:!COa [:paste-and-return "+:clap:"]]
             ]}
 
