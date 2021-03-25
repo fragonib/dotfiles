@@ -19,3 +19,4 @@
     ~/.config/karabiner: os/mac/karabiner-elements
     ~/.config/karabiner.edn: os/mac/karabiner-goku/karabiner.edn
     ~/Library/Preferences/com.knollsoft.Rectangle.plist: os/mac/rectangle/com.knollsoft.Rectangle.plist
+    ~/Library/Preferences/com.mowglii.ItsycalApp.plist: os/mac/itsycal/com.mowglii.ItsycalApp.plist
