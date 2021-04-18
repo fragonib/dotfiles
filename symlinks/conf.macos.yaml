@@ -20,3 +20,4 @@
     ~/.config/karabiner.edn: os/mac/karabiner-goku/karabiner.edn
     ~/Library/Preferences/com.knollsoft.Rectangle.plist: os/mac/rectangle/com.knollsoft.Rectangle.plist
     ~/Library/Preferences/com.mowglii.ItsycalApp.plist: os/mac/itsycal/com.mowglii.ItsycalApp.plist
+    ~/Library/Application Support/Vivaldi/Default/Local App Settings/mpognobbkildjkofajifpdfhcoklimli: os/mac/vivaldi/settings
