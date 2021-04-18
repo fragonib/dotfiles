@@ -765,14 +765,16 @@
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.21176470588235294</real>
+				<real>0.40000000000000002</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.16862745098039217</real>
+				<real>0.40000000000000002</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.40000000000000002</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -1441,14 +1443,16 @@
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.21176470588235294</real>
+				<real>0.40000000000000002</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.16862745098039217</real>
+				<real>0.40000000000000002</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.40000000000000002</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -2019,7 +2023,7 @@
 			<key>Name</key>
 			<string>Fran</string>
 			<key>Non Ascii Font</key>
-			<string>SourceCodePro+Powerline+AwesomeRegular 14</string>
+			<string>Menlo-Regular 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -2257,13 +2261,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.29999999999999999</real>
+				<real>0.40000000000000002</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.29999999999999999</real>
+				<real>0.40000000000000002</real>
 				<key>Red Component</key>
-				<real>0.29999999999999999</real>
+				<real>0.40000000000000002</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
