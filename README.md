@@ -1,13 +1,14 @@
-<h1 align="center">
-  .dotfiles created using <a href="https://github.com/CodelyTV/dotly">🌚 dotly</a>
-</h1>
+# fragonib *dotfiles* created using [dotly](https://github.com/CodelyTV/dotly)
 
-## Restore your Dotfiles
+## Restore Dotfiles
 
-* Install git
-* Clone your dotfiles repository `git clone [your repository of dotfiles] $HOME/.dotfiles`
-* Go to your dotfiles folder `cd $HOME/.dotfiles`
-* Install git submodules `git submodule update --init --recursive`
-* Install your dotfiles `DOTFILES_PATH="$HOME/.dotfiles" DOTLY_PATH="$DOTFILES_PATH/modules/dotly" "$DOTLY_PATH/bin/dot" self install`
-* Restart your terminal
-* Import your packages `dot package import`
+You can install all the configurations at one once by:
+
+* Installing git
+* Launching self installer
+```
+  git clone https://github.com/fragonib/.dotfiles.git ~/.dotfiles
+  cd ~/.dotfiles
+  ./install.sh
+```
+* Restarting your terminal
