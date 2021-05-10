@@ -11,5 +11,14 @@ source "$DOTLY_PATH/scripts/core/_main.sh"
 ##?   prune
 docs::parse "$@"
 
-docker stop $(docker ps -a -q)
+containers=$(docker ps -aq)
+
+output::header "Stoping containers"
+if [[ -n $containers ]]; then
+  docker stop $containers
+else
+  echo "INFO: No containers to stop"
+fi
+
+output::header "Pruning"
 yes | docker system prune -a

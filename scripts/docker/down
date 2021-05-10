@@ -11,5 +11,14 @@ source "$DOTLY_PATH/scripts/core/_main.sh"
 ##?   prune
 docs::parse "$@"
 
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
+containers=$(docker ps -aq)
+if [[ -z $containers ]]; then
+  echo "ERROR: No cointainers to down"
+  exit 1
+fi
+
+output::header "Stoping containers"
+docker stop $containers
+
+output::header "Removing containers"
+docker rm $containers
