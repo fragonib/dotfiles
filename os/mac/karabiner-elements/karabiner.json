@@ -995,6 +995,51 @@
               } ]
             }
           }
+        }, {
+          "from" : {
+            "key_code" : "w"
+          },
+          "to" : [ {
+            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"👋\""
+          } ],
+          "conditions" : [ {
+            "name" : "emoji-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "emoji-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "$HOME/.dotfiles/bin/sdot mac paste_text \"👋\""
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "e"
+            }, {
+              "key_code" : "w"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "emoji-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
         } ]
       }, {
         "description" : "Open apps mode",
@@ -1938,6 +1983,21 @@
           },
           "to" : [ {
             "shell_command" : "/opt/homebrew/bin/skhd -t \"+:keanu-thanks:\""
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.tinyspeck.slackmacgap" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_option" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "/opt/homebrew/bin/skhd -t \"+:hola:\""
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",

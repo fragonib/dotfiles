@@ -90,6 +90,7 @@
                       [:o [:paste "👍"]]
                       [:k [:paste "👎"]]
                       [:a [:paste "👏"]]
+                      [:w [:paste "👋"]]
                       ]}
 
              {:des   "Open apps mode"
@@ -165,6 +166,7 @@
                       [:!COa [:type "+:clap:"]]
                       [:!COt [:type "+:thankyou:"]]
                       [:!COk [:type "+:keanu-thanks:"]]
+                      [:!COw [:type "+:hola:"]]
                       ]}
 
              {:des "[notion] Show recent pages" :rules [:Notion [:show-recent :!Cp]]}
