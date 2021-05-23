@@ -16,15 +16,15 @@ prompt_jarvis_status() {
 
 prompt_jarvis_pwd() {
   local -r prompt_short_dir=$("$DOTLY_PATH/bin/dot" core short_pwd)
-  print -n "%F{yellow}${prompt_short_dir}"
+  print -n " %F{yellow}${prompt_short_dir}"
 }
 
 prompt_jarvis_git() {
-  [[ -n ${git_info} ]] && print -n "%F{white}(${(e)git_info[prompt]}%F{white})"
+  [[ -n ${git_info} ]] && print -n " %F{white}(${(e)git_info[prompt]}%F{white})"
 }
 
 prompt_jarvis_start() {
-  print -n "%F{white}$START "
+  print -n " %F{white}$START "
 }
 
 prompt_jarvis_setup() {
@@ -39,7 +39,7 @@ prompt_jarvis_setup() {
   zstyle ':zim:git-info:dirty' format '%F{yellow}$GIT_DIRTY'
   zstyle ':zim:git-info:keys' format 'prompt' '%F{cyan}%b%c %C%D'
 
-  PS1="\$(prompt_jarvis_status) \$(prompt_jarvis_pwd) \$(prompt_jarvis_git) \$(prompt_jarvis_start)"
+  PS1="\$(prompt_jarvis_status)\$(prompt_jarvis_pwd)\$(prompt_jarvis_git)\$(prompt_jarvis_start)"
   RPS1=''
 }
 
