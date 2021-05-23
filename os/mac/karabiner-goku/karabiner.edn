@@ -52,9 +52,11 @@
               :rules [[:!CTspacebar :fn]]}
              {:des   "[keyboard] Symbols // @todo: move this to a keyboard layout using ukelele"
               :rules [
-                      [:!On [:type "ñ"]]
-                      [:!OSn [:type "Ñ"]]
-                      [:!Oslash [:type "¿"]]
+                      [:!En [:type "ñ"]]
+                      [:!ERn [:type "Ñ"]]
+                      [:!Eslash [:type "¿"]]
+                      [:!Equote :!Eu]
+                      [:!Rquote [:type f]]
                       ]}
 
              ;; ------------ Utils ------------
