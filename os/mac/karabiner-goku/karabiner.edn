@@ -40,29 +40,29 @@
             [
 
              ;; ------------ Remaps ------------
-             {:des   "[mouse] Up key -> Restore last hidden"
+             {:des   "[mouse] Up key => Restore last hidden"
               :rules [[{:pkey :button5} :!Ctab]]}
-             {:des   "[mouse] Down key -> Hide"
+             {:des   "[mouse] Down key => Hide current window"
               :rules [[{:pkey :button4} [{:pkey :button1} :!Ch]]]}
-             {:des   "[keyboard] ctr + cmd + ↑ as ↓"
+             {:des   "[keyboard] ctr + cmd + ↑ => ↓"
               :rules [[:!CTdown_arrow :!CTup_arrow]]}
-             {:des   "[keyboard] shift + opt + cmd + ↑ as shift + opt + cmd + →"
+             {:des   "[keyboard] shift + opt + cmd + ↑ => shift + opt + cmd + →"
               :rules [[:!CTdown_arrow :!CTup_arrow]]}
-             {:des   "[keyboard] ctr + cmd + space as fn"
+             {:des   "[keyboard] ctr + cmd + space => fn"
               :rules [[:!CTspacebar :fn]]}
+             {:des   "[keyboard] Change to insert shortcut"
+              :rules [[:!CS4 :insert]]}
+
+             ;; ------------ Utils ------------
              {:des   "[keyboard] Spanish Symbols // @TODO: move this to a keyboard layout using ukelele"
               :rules [
                       [:!En [:type "ñ"]]
                       [:!ERn [:type "Ñ"]]
                       [:!Eslash [:type "¿"]]
-                      [:!Equote :!Eu] ;; ¨ symbol
+                      [:!Equote :!Eu]                       ;; ¨ symbol
                       ]}
-
-             ;; ------------ Utils ------------
              {:des   "[util] Disable Caps Locks"
               :rules [[:caps_lock ""]]}
-             {:des   "[util] Disable Screen capture shorcut"
-              :rules [[:!CS4 ""]]}
              {:des   "[util] Extend selection"
               :rules [[:selection-extend [:!Oleft_arrow :!OSright_arrow] [:!IntelliJ :!Notion]]]}
              {:des   "[util] Delete line"
@@ -133,9 +133,9 @@
               :rules [[:!CTOb "$HOME/.dotfiles/bin/sdot window move-active --right_half"]]}
 
              ;; ------------ Application specific ------------
-             {:des   "[chrome] Show recent tabs" :rules [:Chrome [:show-recent :!CSa]]}
-             {:des   "[chrome] Inspect element" :rules [:Chrome [:!CSi :!CSc]]}
-             {:des   "[chrome] Toggle console" :rules [:Chrome [:!CTOt :!COj]]}
+             {:des "[chrome] Show recent tabs" :rules [:Chrome [:show-recent :!CSa]]}
+             {:des "[chrome] Inspect element" :rules [:Chrome [:!CSi :!CSc]]}
+             {:des "[chrome] Toggle console" :rules [:Chrome [:!CTOt :!COj]]}
              {:des   "[chrome] Switch profile"
               :rules [:Chrome [:switch-account [:!CSm :return_or_enter]]]}
 
@@ -159,7 +159,7 @@
                       [:!COw [:type "+:hola:"]]
                       ]}
 
-             {:des   "[notion] Show recent pages" :rules [:Notion [:show-recent :!Cp]]}
+             {:des "[notion] Show recent pages" :rules [:Notion [:show-recent :!Cp]]}
              {:des   "[notion] Toggle sidebar"
               :rules [:Notion [:sidebar-primary-toggle :!Cbackslash]]}
              {:des   "[notion] Extend selection"
