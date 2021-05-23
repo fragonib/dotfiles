@@ -1,7 +1,18 @@
 #!/usr/bin/env zsh
 
-NONE="✓"
-DIRTY="×"
+CMD_OK="✓"
+CMD_KO="✗"
+GIT_NONE="✓"
+GIT_DIRTY="✗"
+START="➤"
+
+prompt_jarvis_precmd() {
+  (( ${+functions[git-info]} )) && git-info
+}
+
+prompt_jarvis_status() {
+  print -n "%(?:%F{green}[%F{white}$CMD_OK%F{green}]:%F{red}[%F{white}$CMD_KO%F{red}])"
+}
 
 prompt_jarvis_pwd() {
   local -r prompt_short_dir=$("$DOTLY_PATH/bin/dot" core short_pwd)
@@ -9,15 +20,14 @@ prompt_jarvis_pwd() {
 }
 
 prompt_jarvis_git() {
-  [[ -n ${git_info} ]] && print -n "%F{white} on${(e)git_info[prompt]}"
+  [[ -n ${git_info} ]] && print -n "%F{white}(${(e)git_info[prompt]}%F{white})"
 }
 
-prompt_jarvis_precmd() {
-  (( ${+functions[git-info]} )) && git-info
+prompt_jarvis_start() {
+  print -n "%F{white}$START "
 }
 
 prompt_jarvis_setup() {
-  local prompt_jarvis_status='%(?:%F{green}[%F{white}$NONE%F{green}]:%F{red}[%F{white}$DIRTY%F{red}])'
 
   autoload -Uz add-zsh-hook && add-zsh-hook precmd prompt_jarvis_precmd
 
@@ -25,11 +35,11 @@ prompt_jarvis_setup() {
 
   zstyle ':zim:git-info:branch' format '%F{green}%b'
   zstyle ':zim:git-info:commit' format '%c'
-  zstyle ':zim:git-info:clean' format '%F{white}$NONE'
-  zstyle ':zim:git-info:dirty' format '%F{yellow}$DIRTY'
-  zstyle ':zim:git-info:keys' format 'prompt' ' %F{cyan}%b%c %C%D'
+  zstyle ':zim:git-info:clean' format '%F{white}$GIT_NONE'
+  zstyle ':zim:git-info:dirty' format '%F{yellow}$GIT_DIRTY'
+  zstyle ':zim:git-info:keys' format 'prompt' '%F{cyan}%b%c %C%D'
 
-  PS1="${prompt_jarvis_status} \$(prompt_jarvis_pwd)\$(prompt_jarvis_git)%f "
+  PS1="\$(prompt_jarvis_status) \$(prompt_jarvis_pwd) \$(prompt_jarvis_git) \$(prompt_jarvis_start)"
   RPS1=''
 }
 
