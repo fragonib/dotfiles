@@ -35,7 +35,7 @@
  :simlayers {:emoji-mode  {:key :e}
              :open-mode   {:key :o}
              :script-mode {:key :s}
-             :symbol-mode {:key :quote}}
+             }
  :main
             [
 
@@ -55,19 +55,6 @@
                       [:!On [:type "ñ"]]
                       [:!OSn [:type "Ñ"]]
                       [:!Oslash [:type "¿"]]
-                      ]}
-             {:des   "[keyboard] Spanish symbols"
-              :rules [:symbol-mode
-                      [:a [:type "á"]]
-                      [:!Ra [:type "Á"]]
-                      [:e [:type "é"]]
-                      [:!Re [:type "É"]]
-                      [:i [:type "í"]]
-                      [:!Ri [:type "Í"]]
-                      [:o [:type "ó"]]
-                      [:!Ro [:type "Ó"]]
-                      [:u [:type "ú"]]
-                      [:!Ru [:type "Ú"]]
                       ]}
 
              ;; ------------ Utils ------------
