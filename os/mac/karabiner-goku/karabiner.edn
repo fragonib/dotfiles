@@ -50,13 +50,12 @@
               :rules [[:!CTdown_arrow :!CTup_arrow]]}
              {:des   "[keyboard] ctr + cmd + space as fn"
               :rules [[:!CTspacebar :fn]]}
-             {:des   "[keyboard] Symbols // @todo: move this to a keyboard layout using ukelele"
+             {:des   "[keyboard] Spanish Symbols // @TODO: move this to a keyboard layout using ukelele"
               :rules [
                       [:!En [:type "ñ"]]
                       [:!ERn [:type "Ñ"]]
                       [:!Eslash [:type "¿"]]
-                      [:!Equote :!Eu]
-                      [:!Rquote [:type f]]
+                      [:!Equote :!Eu] ;; ¨ symbol
                       ]}
 
              ;; ------------ Utils ------------

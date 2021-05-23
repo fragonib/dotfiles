@@ -106,7 +106,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "[keyboard] Symbols // @todo: move this to a keyboard layout using ukelele",
+        "description" : "[keyboard] Spanish Symbols // @TODO: move this to a keyboard layout using ukelele",
         "manipulators" : [ {
           "from" : {
             "key_code" : "n",
@@ -150,17 +150,6 @@
           "to" : [ {
             "key_code" : "u",
             "modifiers" : [ "right_option" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "quote",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "/opt/homebrew/bin/skhd -t \"f\""
           } ],
           "type" : "basic"
         } ]
