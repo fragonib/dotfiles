@@ -61,6 +61,8 @@
              ;; ------------ Utils ------------
              {:des   "[util] Disable Caps Locks"
               :rules [[:caps_lock ""]]}
+             {:des   "[util] Disable Screen capture shorcut"
+              :rules [[:!CS4 ""]]}
              {:des   "[util] Extend selection"
               :rules [[:selection-extend [:!Oleft_arrow :!OSright_arrow] [:!IntelliJ :!Notion]]]}
              {:des   "[util] Delete line"
@@ -131,9 +133,9 @@
               :rules [[:!CTOb "$HOME/.dotfiles/bin/sdot window move-active --right_half"]]}
 
              ;; ------------ Application specific ------------
-             {:des "[chrome] Show recent tabs" :rules [:Chrome [:show-recent :!CSa]]}
-             {:des "[chrome] Inspect element" :rules [:Chrome [:!CSi :!CSc]]}
-             {:des "[chrome] Toggle console" :rules [:Chrome [:!CTOt :!COj]]}
+             {:des   "[chrome] Show recent tabs" :rules [:Chrome [:show-recent :!CSa]]}
+             {:des   "[chrome] Inspect element" :rules [:Chrome [:!CSi :!CSc]]}
+             {:des   "[chrome] Toggle console" :rules [:Chrome [:!CTOt :!COj]]}
              {:des   "[chrome] Switch profile"
               :rules [:Chrome [:switch-account [:!CSm :return_or_enter]]]}
 
@@ -157,7 +159,7 @@
                       [:!COw [:type "+:hola:"]]
                       ]}
 
-             {:des "[notion] Show recent pages" :rules [:Notion [:show-recent :!Cp]]}
+             {:des   "[notion] Show recent pages" :rules [:Notion [:show-recent :!Cp]]}
              {:des   "[notion] Toggle sidebar"
               :rules [:Notion [:sidebar-primary-toggle :!Cbackslash]]}
              {:des   "[notion] Extend selection"

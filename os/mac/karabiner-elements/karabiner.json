@@ -165,6 +165,20 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "[util] Disable Screen capture shorcut",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "4",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : ""
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "[util] Extend selection",
         "manipulators" : [ {
           "from" : {
